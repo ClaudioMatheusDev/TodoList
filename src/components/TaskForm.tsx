@@ -1,24 +1,25 @@
-import React from 'react'
+import React from 'react';
+
+// CSS
+import styles from './TaskForm.module.css';
 
 type Props = {
-  btnText: string
+  btnText: string;
 }
 
-const TaskForm = ({btnText}: Props) => {
+const TaskForm = ({ btnText }: Props) => {
   return (
-    <div>
-    <form>
-      <div>
-        <label htmlFor='title'>Título:</label>
-        <input type='text' name='title' placeholder='Título da tarefa' />
+    <form className={styles.form}>
+      <div className={styles.input_container}>
+        <label htmlFor="title">Título:</label>
+        <input type="text" name="title" placeholder="Título da tarefa" />
       </div>
-      <div>
-        <label htmlFor='difficulty'>Dificuldade:</label>
-        <input type='text' name='difficulty' placeholder='Dificuldade da tarefa' />
+      <div className={styles.input_container}>
+        <label htmlFor="difficulty">Dificuldade:</label>
+        <input type="text" name="difficulty" placeholder="Dificuldade da tarefa" />
       </div>
-      <input type='submit' value={btnText} />
+      <input type="submit" value={btnText} />
     </form>
-  </div>
   );
 };
 
